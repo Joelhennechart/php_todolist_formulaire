@@ -1,0 +1,71 @@
+/* reinisialisation du css sur certaines propriétés */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html, body{
+    font-size: 20px;
+}
+
+/* css de la navbar */
+header{
+    padding: 10px 30px;
+    }
+
+a{
+    vertical-align: middle;
+    margin-right: 30px;
+}
+img{
+    height:80px;
+    margin-right: 100px;
+    }
+/* Css de la page index.php + create_account.php */
+.container{
+    border: 1px solid black;
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin: auto;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: auto;
+}
+h1{
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0;
+}
+.form-control{
+    display: flex;
+    flex-flow:column;
+    margin: 10px 0;
+    height: 80px;
+}
+.btn-primary{
+    background-color: rgb(47, 255, 57);
+    border-radius: 3px;
+    cursor: pointer;
+    width: 150px;
+    margin: 0 auto;
+}
+p.text-error{
+    color: brown;
+}
+/* Css de la page connected */
+/* NavBar spécifique a la todolist*/
+.todolist_navBar{
+    margin-top: 20px;
+    min-height: 50px;
+    border: 1px solid black;
+    text-align: center;
+}
+.todolist_block_tittle{
+    margin-bottom: 10px;
+}
