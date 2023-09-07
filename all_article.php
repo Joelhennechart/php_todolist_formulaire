@@ -11,11 +11,11 @@
         else {
             $userID = $_SESSION['userID'];
             }
-    /**  Todo : En BDD, je récupère les 5 articles les plus recents dont l'utiisateur est l'auteur.
+    /**  Todo : En BDD, je récupère tous les articles les plus recents dont l'utiisateur est l'auteur.
            * ILs sont :
             *-trier du plus récent au plus anciens
             * L'utilisateur doir être l'auteur */
-    $rqt ='SELECT id, title FROM article WHERE author = :userID ORDER BY creation_date DESC LIMIT 5';
+    $rqt ='SELECT id, title FROM article WHERE author = :userID ORDER BY creation_date DESC';
      //pour récupèrer les 5 dernier articles dont l'utisateur est l'hauteur//  
         $db_statement = $db_connexion->prepare($rqt);
         $db_statement->execute(
@@ -25,15 +25,15 @@
     );
     $datas = $db_statement->fetchAll();
     
+    
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Bienvenu dans votre espace personnel Retrouvez ici vos 5 articles les plus récents !">
-    <title>Accueil connecté - 5 articles</title>
+    <meta name="description" content="Ceci est la page ou vous retrouverez la liste de tous vos articles !">
+    <title>Retrouver la liste de vos articles</title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
@@ -46,6 +46,7 @@
 require_once('./includes/todolist_navBar.php');
 ?>   
 <!--Afficher les 5 articles que je viens de récupèrer -->
+
 <?php
     foreach($datas as $data){
         echo('
@@ -60,4 +61,3 @@ require_once('./includes/todolist_navBar.php');
     }
 ?> 
 </body>
-</html>

@@ -69,3 +69,45 @@ p.text-error{
 .todolist_block_tittle{
     margin-bottom: 10px;
 }
+/* un article est une carte cliquable */
+.card{
+    border: 2px solid red;
+    background-color: aqua;
+    width: 80%;
+    height: 50px;
+    margin: 20px auto;
+}
+.card:hover{
+    opacity: 30%;
+}
+.article{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+.info{
+    text-align: center;
+    margin-top: 10px;
+}
+/* css de la page connected */
+.container{
+    display: block; /*elements superposés*/
+    border: 1px solid rebeccapurple;
+    width: 60%;
+    min-width: 350px;
+    margin-top: 20px;
+}
+.todolist_content{
+    overflow: hidden;
+    margin: 30px auto;
+    padding: 0 10px;
+    min-height: 200px;
+}
+.todolist_footer{
+    display: grid;
+    grid-template-columns: repeat(2, 50%); /*2 colonnes de 50% du block parent*/    
+    padding-top: 30px;
+}
+.todolist_footer_content{
+    margin: 0 auto;
+}
