@@ -32,9 +32,9 @@
             header('location:connected.php');
         }   
         // $article['creation_date'] est de type String. Je stocke cette date dans
-        // la variable $date pour avoir un format JJ/MM/AA
+        // la variable $date pour avoir un format JJ/MM/AAAA
         $date = new DateTimeImmutable($article['creation_date']);
-        $date = date_format($date, "d/m/y");
+        $date = date_format($date, "d/m/Y");
 
     } 
         else {

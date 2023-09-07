@@ -4,6 +4,6 @@
     </p>
    <!-- Les liens de redirections : un lien pour chaque élément du CRUD mis en place -->
    <a href="all_article.php">liste des articles</a>
-   <a href="">Ajouter un nouvel article</a>
+   <a href="new_article.php">Ajouter un nouvel article</a>
    <a href="">Modifier/supprimer un Article</a> 
 </section>
