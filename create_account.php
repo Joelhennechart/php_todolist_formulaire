@@ -33,7 +33,8 @@ elseif (mb_strlen($passwd) <10) {
     $errors['passwd'] = ERROR_PASSWORD_NUMBER_OF_CHARACTERS;
 }
 //execution de la requète INSERT into
-if(($login) && ($passwd)) {
+if(($login) && ($passwd) && !empty($login) && (mb_strlen($passwd) >=10)) { 
+    //pour empecher le conte de se créer si le mot de passe fait - de 10caractéres
     $sql = 'SELECT login FROM user WHERE login = :login';
     $db_statement = $db_connexion->prepare($sql);
     $db_statement->execute(
