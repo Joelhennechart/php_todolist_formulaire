@@ -38,7 +38,7 @@
 
     } 
         else {
-            header('location:connnected.php');
+            header('location:connected.php');
         }
     
 ?>
@@ -73,6 +73,13 @@ require_once('./includes/todolist_navBar.php');
             Edité le :<?php echo(htmlspecialchars($date))?>
         </div>
     </div>
+    <div class="button_zone">
+        <a href="update_article.php?id=<?= $idArticle ?>" class="btn-primary">Modifier</a>
+        <form action="#" method="delete">
+            <input type="submit" class="btn-primary btn-warning" value="SUPPRIMER"></input>
+        </form>
+    </div>
+    
 </article>
     
 </body>
