@@ -40,7 +40,17 @@
         else {
             header('location:connected.php');
         }
-    
+
+        //version Naima//
+    if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        $rqt = 'DELETE FROM article WHERE id = :idArticle';
+        $db_statement = $db_connexion->prepare($rqt);
+        $db_statement->execute(
+            array(
+            ':idArticle'=>$_GET['id']));
+            header('location:connected.php');
+            exit;
+    }    
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -55,9 +65,6 @@
     <!-- Ma navBar est importée -->
 <?php 
     require_once('./includes/navBar.php');
-  // Ma navBar todolist est importée //
-
-require_once('./includes/todolist_navBar.php');
 ?>
 
 <article class="container">
@@ -75,7 +82,8 @@ require_once('./includes/todolist_navBar.php');
     </div>
     <div class="button_zone">
         <a href="update_article.php?id=<?= $idArticle ?>" class="btn-primary">Modifier</a>
-        <form action="#" method="delete">
+        <form action="#" onsubmit="return confirm('etes vous sur de vouloir supprimer l\'article')" method="POST">
+        <!-- onsubmit="return confirm('etes vous sur de vouloir supprimer l\'article')"pour avoir la confirmation de su^ppression de l'article -->
             <input type="submit" class="btn-primary btn-warning" value="SUPPRIMER"></input>
         </form>
     </div>
