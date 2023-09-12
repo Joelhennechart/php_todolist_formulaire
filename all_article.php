@@ -41,9 +41,6 @@
 <!-- Ma navBar est importée -->
 <?php 
     require_once('./includes/navBar.php');
-  // Ma navBar todolist est importée //
-
-require_once('./includes/todolist_navBar.php');
 ?>   
 <!--Afficher les 5 articles que je viens de récupèrer -->
 

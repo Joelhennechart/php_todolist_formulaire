@@ -85,9 +85,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     <!-- Ma navBar est importée -->
 <?php 
     require_once('./includes/navBar.php');
-  // Ma navBar todolist est importée //
-
-    require_once('./includes/todolist_navBar.php');
 ?>
         <section class="container">
             <div class="form-container">

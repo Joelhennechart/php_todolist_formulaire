@@ -1,5 +1,7 @@
 <?php
     session_start();
+// Supprimez toutes les données de session
+session_unset();
 // J'inclus une connexion vers ma BDD
     include('./model/db_connexion.php');
 // Création de constantes qui contiennent les erreurs possibles
